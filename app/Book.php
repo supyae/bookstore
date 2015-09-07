@@ -3,11 +3,6 @@
 use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model {
-   <?php namespace App;
-
-use Illuminate\Database\Eloquent\Model;
-
-class Book extends Model {
     public $table = 'books';
     protected $primaryKey = 'id';
     public  $timestamps = true;
@@ -20,5 +15,4 @@ class Book extends Model {
     public function genre(){
         return $this->belongsTo('App\Genre','genreId');
     }
-
 }
