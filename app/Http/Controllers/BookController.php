@@ -44,7 +44,7 @@ class BookController extends Controller {
     public function getAuthorGenre()
     {
         $author = $this->author->orderBy('id','DESC')->get(['id','name']);
-        $genre = $this->genre->orderBy('type','ASC')->get(['id','type']);
+        $genre = $this->genre->orderBy('type','DESC')->get(['id','type']);
         return array($author, $genre);
     }
 
